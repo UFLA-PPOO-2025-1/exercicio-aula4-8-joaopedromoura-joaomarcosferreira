@@ -29,15 +29,9 @@ public class VisaoDeGrafico implements VisaoSimulador
     // Um objeto de estatísticas que calcula e armazena informações da simulação.
     private EstatisticasCampo estatisticas;
 
-    /**
-     * Construtor.
-     * 
-     * @param largura A largura da janela do gráfico (in pixels).
-     * @param altura A largura da janela do gráfico (in pixels).
-     * @param yMaximoInicial O valor máximo inicial para o eixo y.
-     */
-    public VisaoDeGrafico(int largura, int altura, int yMaximoInicial)
-    {
+    public VisaoDeGrafico(int largura, int altura, int yMaximoInicial){
+
+
         estatisticas = new EstatisticasCampo();
         classes = new HashSet<>();
         cores = new HashMap<>();

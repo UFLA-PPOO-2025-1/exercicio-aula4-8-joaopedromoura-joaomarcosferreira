@@ -26,6 +26,7 @@ public class Simulador
     private int passo;
     // Visões gráficas da simulação.
     private List<VisaoSimulador> visoes;
+
     
     /**
      * Constrói um campo de simulação com tamanho padrão.
@@ -62,6 +63,9 @@ public class Simulador
         GeradorDePopulacoes.definirCores(visao);
         visoes.add(visao);
         
+        visao = new VisaoDetexto();
+        visoes.add(visao);
+
         // Configura um ponto de partida válido.
         reiniciar();
     }
