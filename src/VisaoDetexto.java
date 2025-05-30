@@ -1,33 +1,35 @@
 import java.awt.Color;
 
-public class VisaoDetexto implements VisaoSimulador{
+public class VisaoDetexto implements VisaoSimulador {
     private EstatisticasCampo estatisticas;
 
-    public VisaoDetexto(){
+    public VisaoDetexto() {
         estatisticas = new EstatisticasCampo();
     }
-    @Override
-    public void definirCor(Class<?> classeAnimal, Color cor){
 
+    @Override
+    public void definirCor(Class<?> classeAnimal, Color cor) {
+        // Nada pra fazer por aqui
     }
 
     @Override
-    public boolean ehViavel(Campo campo){
+    public boolean ehViavel(Campo campo) {
         return estatisticas.ehViavel(campo);
     }
 
     @Override
-    public void mostrarStatus(int passo, Campo campo){
-        System.out.println("Passo: " +passo + " - "+  estatisticas.obterDetalhesPopulacao(campo));
+    public void mostrarStatus(int passo, Campo campo) {
+        estatisticas.reiniciar();
+        System.out.println("Passo: " + passo + " - " + estatisticas.obterDetalhesPopulacao(campo));
     }
 
     @Override
-    public void reiniciar(){
+    public void reiniciar() {
         estatisticas.reiniciar();
     }
 
     @Override
-    public void reabilitarOpcoes(){
-
+    public void reabilitarOpcoes() {
+        // Nada pra fazer por aqui
     }
 }

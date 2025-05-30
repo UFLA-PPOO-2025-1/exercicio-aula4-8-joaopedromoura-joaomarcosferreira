@@ -28,7 +28,7 @@ public class VisaoDeGrafico implements VisaoSimulador
     private Map<Class<?>, Color> cores;
     // Um objeto de estatísticas que calcula e armazena informações da simulação.
     private EstatisticasCampo estatisticas;
-
+    
     public VisaoDeGrafico(int largura, int altura, int yMaximoInicial){
 
 
